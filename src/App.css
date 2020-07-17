@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+body {
+  background-color: #010213;
+  color: #8a1e3b;
+  font-family: 'Raleway', sans-serif;
+  text-transform: capitalize;
+  letter-spacing: 4px;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App > .header {
+  padding: 0.5%;
+  padding-left: 1.5%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+.header > .section-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-width: 80%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo {
+  height: auto;
+  max-width: 300px;
+}
+
+.logo > img {
+  max-width: 90%;
+  height: auto;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10%;
+}
+
+nav > a {
+  margin: 0px 15px 0px 15px;
+  text-decoration: none;
+  color: #8a1e3b;
+  font-weight: 900;
+  font-size: 1.3em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+}
+
+nav > a:hover {
+  color: #FDBB30;
+}
+
+.header > .section-2 {
+  margin-right: 1%;
+}
+
+.header > .section-2 > button {
+    display: block;
+    padding: 15px 35px;
+    border: 2px solid #03042e;
+    background: #8a1e3b;
+    border-radius: 30px;
+    font-size: 1em;
+    font-weight: 500;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+.header > .section-2 > button:hover {
+  background: #FDBB30;
+  color: #363636;
+  cursor: pointer;
+}
+
+.landing {
+  padding: 0.2% 0% 1% 0%;
+  max-height: 80vh;
+  width: auto;
+  overflow: hidden;
+}
+
+.landing > img {
+  max-width: 100%;
+  filter: blur(2px);
 }
