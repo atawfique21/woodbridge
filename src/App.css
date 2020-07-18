@@ -1,11 +1,14 @@
 body {
-  background-color: #010213;
+  background-color: #002144; 
+  /* 010213 */
   color: #8a1e3b;
   font-family: 'Raleway', sans-serif;
   text-transform: capitalize;
   letter-spacing: 4px;
   overflow-x: hidden;
 }
+
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 
 .App > .header {
   padding: 0.5%;
@@ -14,7 +17,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
+  padding-bottom: 0%;
 }
 
 .header > .section-1 {
@@ -44,7 +47,7 @@ nav {
 nav > a {
   margin: 0px 15px 0px 15px;
   text-decoration: none;
-  color: #8a1e3b;
+  color: rgb(255, 212, 131);
   font-weight: 900;
   font-size: 1.3em;
   letter-spacing: 2px;
@@ -53,39 +56,195 @@ nav > a {
 }
 
 nav > a:hover {
-  color: #FDBB30;
+  color: #991f40;
+  
 }
-
 .header > .section-2 {
   margin-right: 1%;
 }
 
-.header > .section-2 > button {
-    display: block;
-    padding: 15px 35px;
-    border: 2px solid #03042e;
-    background: #8a1e3b;
-    border-radius: 30px;
-    font-size: 1em;
-    font-weight: 500;
-    color: #fff;
-    transition: 0.3s ease-in-out;
+/* Header Button Code Here */
+.snip1372 {
+  /* font-family: 'Raleway', Arial, sans-serif; */
+  border: none;
+  border-radius: 5px;
+  color: rgb(255, 212, 131);
+  cursor: pointer;
+  padding: 0px 68px 0px 20px;
+  text-align: center;
+  display: inline-block;
+  /* margin: 12px 25px; */
+  font-weight: 300;
+  outline: none;
+  position: relative;
+  font-size: 16px;
+  line-height: 50px;
+  background-color: #8a1e3b;
 }
+.snip1372 i {
+  font-size: 1.5em;
+  width: 55px;
+  line-height: 50px;
+  position: absolute;
+  right: 0;
+}
+.snip1372:before,
+.snip1372:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 44px;
+  bottom: 6px;
+  border-radius: 5px 5px;
+}
+.snip1372:after {
+  background-color: rgba(255, 255, 255, 0.075);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4) inset, 1px 1px 2px -2px rgba(255, 255, 255, 0.3);
+}
+.snip1372:before {
+  opacity: 0;
+  background-color: #fdbc30a6;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+.snip1372:hover,
+.snip1372.hover {
+  color: #ffffff;
+}
+.snip1372:hover:before,
+.snip1372.hover:before {
+  opacity: 1;
+}
+/* Header Button Code Ends Here */
+
+/* .header > .section-2 > button {
+  display: block;
+  padding: 15px 35px;
+  border: 1px solid #FDBB30;
+  background: #8a1e3b;
+  border-radius: 30px;
+  font-size: 1em;
+  outline: none;
+  font-weight: 500;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+  opacity: 0.8;
+} */
 
 .header > .section-2 > button:hover {
-  background: #FDBB30;
-  color: #363636;
+  /* background: #FDBB30; */
+  /* color: #363636; */
+  opacity: 1;
   cursor: pointer;
 }
 
 .landing {
-  padding: 0.2% 0% 1% 0%;
-  max-height: 80vh;
+  padding: 0% 1.5% 1% 1.5%;
+  max-height: 82vh;
   width: auto;
   overflow: hidden;
+  position: relative;
+  text-align: center;
+  color: white;
 }
 
 .landing > img {
   max-width: 100%;
-  filter: blur(2px);
+  opacity: 0.8;
+  filter: blur(4px);
+  border-radius: 2%;
+}
+
+.landing > h2 {
+  position: absolute;
+  top: 25%;
+  left: 18%;
+  max-width: 50%;
+  font-size: 3rem;
+  text-align: left;
+  background-color: #8a1e3bbd;
+  padding: 1%;
+  border-radius: 5%;
+  color: #fff;
+  letter-spacing: 3px;
+  /* text-transform: uppercase; */
+  word-spacing: -5px;
+  z-index: 2;
+}
+
+.zeroop {
+  opacity: 0;
+}
+
+.landing > span {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  height: 100%;
+  width: 100%;
+  /* border-radius: 1%; */
+  background-color: rgba(255, 255, 255, 0.09);
+  /* padding: 5%; */
+}
+
+.landing > #first {
+  position: absolute;
+  top: 60%;
+  left: 19.5%;
+  z-index: 2;
+  background-color: #002144;
+  color: rgb(255, 212, 131);
+}
+
+.landing > #first::before {
+  background-color: #fdbc307c;
+}
+
+
+.landing > #second { 
+  position: absolute;
+  top: 60%;
+  left: 31.9%;
+  z-index: 1;
+  background-color: #8a1e3bc0;
+  min-width: 171px;
+}
+
+
+.arrow{
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+}
+.arrow span{
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-bottom: 5px solid rgb(255, 212, 131);
+  border-right: 5px solid rgb(255, 212, 131);
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 3s infinite;
+}
+.arrow span:nth-child(2){
+  animation-delay: -0.2s;
+}
+.arrow span:nth-child(3){
+  animation-delay: -0.4s;
+}
+@keyframes animate {
+  0%{
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px,-20px);
+  }
+  50%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+      transform: rotate(45deg) translate(20px,20px);
+  }
 }

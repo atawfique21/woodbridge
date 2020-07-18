@@ -16,9 +16,10 @@ const Header = () => {
             </div>
 
             <div className="section-2">
-                <button>
+                {/* <button>
                     Book Now
-                </button>
+                </button> */}
+                <button class="snip1372">Book Now<i class="ion-ios-calendar-outline"></i></button>
             </div>
         </div>
     )
