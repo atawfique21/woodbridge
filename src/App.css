@@ -1,7 +1,7 @@
 body {
-  background-color: #002144; 
+  background-color: #002144;
   color: #8a1e3b;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   text-transform: capitalize;
   letter-spacing: 4px;
   overflow-x: hidden;
@@ -96,7 +96,8 @@ nav > a:hover {
 }
 .snip1372:after {
   background-color: rgba(255, 255, 255, 0.075);
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4) inset, 1px 1px 2px -2px rgba(255, 255, 255, 0.3);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4) inset,
+    1px 1px 2px -2px rgba(255, 255, 255, 0.3);
 }
 .snip1372:before {
   opacity: 0;
@@ -136,15 +137,20 @@ nav > a:hover {
   user-select: none;
 }
 
-.landing > h2 {
+.landing > .hover {
+  width: fit-content;
+  height: auto;
   position: absolute;
   top: 25%;
   left: 18%;
-  max-width: 50%;
+}
+
+.landing > .hover > h2 {
+  min-width: 55%;
   font-size: 3rem;
   text-align: left;
   background-color: #8a1e3bbd;
-  padding: 1%;
+  padding: 2%;
   border-radius: 1.9%;
   color: #fff;
   letter-spacing: 3px;
@@ -157,7 +163,7 @@ nav > a:hover {
   opacity: 0;
 }
 
-.landing > span {
+.landing > .hover > span {
   position: absolute;
   left: 0%;
   top: 0%;
@@ -166,41 +172,41 @@ nav > a:hover {
   background-color: rgba(255, 255, 255, 0.09);
 }
 
-.landing > #first {
-  position: absolute;
-  top: 58%;
-  left: 19.5%;
+.hover > .hover-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#first {
   z-index: 2;
   background-color: #002144;
   color: rgb(255, 212, 131);
 }
 
-.landing > #first::before {
+#first::before {
   background-color: #fdbc30a6;
 }
 
-.landing > #first:hover {
+#first:hover {
   color: whitesmoke;
 }
 
-.landing > #second { 
-  position: absolute;
-  top: 58%;
-  left: 31.9%;
+#second {
   z-index: 1;
   background-color: #8a1e3bc0;
   min-width: 171px;
 }
 
-.arrow{
+.arrow {
   position: absolute;
   top: 90%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   z-index: 2;
 }
 
-.arrow span{
+.arrow span {
   display: block;
   width: 15px;
   height: 15px;
@@ -210,24 +216,24 @@ nav > a:hover {
   margin: -10px;
   animation: animate 3s infinite;
 }
-.arrow span:nth-child(2){
+.arrow span:nth-child(2) {
   animation-delay: -0.2s;
 }
-.arrow span:nth-child(3){
+.arrow span:nth-child(3) {
   animation-delay: -0.4s;
 }
 
 @keyframes animate {
-  0%{
-      opacity: 0;
-      transform: rotate(45deg) translate(-20px,-20px);
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
   }
-  50%{
-      opacity: 1;
+  50% {
+    opacity: 1;
   }
-  100%{
-      opacity: 0;
-      transform: rotate(45deg) translate(20px,20px);
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
   }
 }
 
@@ -237,7 +243,6 @@ nav > a:hover {
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: 2em;
-
 }
 
 .room {
@@ -259,14 +264,14 @@ nav > a:hover {
 }
 
 .room > h2 {
-  font-family: 'Sacramento', cursive;
+  font-family: "Sacramento", cursive;
   font-size: 3.3em;
   margin: 0;
 }
 
 .room > img {
-  max-width:100%;
-  max-height:100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .info {
@@ -311,7 +316,7 @@ nav > a:hover {
 }
 
 .pricing {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   min-width: 20vw;
   min-height: 36vh;
   align-items: center;
@@ -323,7 +328,7 @@ nav > a:hover {
 }
 
 .pricing > h3 {
-  font-family: 'Open Sans Condensed';
+  font-family: "Open Sans Condensed";
   font-size: 2.9rem;
 }
 
