@@ -95,7 +95,7 @@ class Landing extends React.Component {
                     <span></span>
                 </div>
                 <h2><span id="typewriter"><span id="input"></span><span id="cursor">|</span></span> Stays<br></br> Near Cleveland<br></br> Metro Hospital</h2>
-                <button class="snip1372" id="first">See Rooms<i class="ion-ios-calendar-outline"></i></button>
+                <button class="snip1372" id="first">See Rooms<i class="ion-ios-home-outline"></i></button>
                 <button class="snip1372" id="second">Book Now<i class="ion-ios-calendar-outline"></i></button>
             </div>
         )
