@@ -22,7 +22,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  min-width: 80%;
+  min-width: 20%;
 }
 
 .logo {
@@ -36,6 +36,10 @@ body {
   padding: 0;
 }
 
+.header > .section-mid {
+  min-width: 50%;
+}
+
 nav {
   display: flex;
   flex-direction: row;
@@ -47,14 +51,17 @@ nav > a {
   text-decoration: none;
   color: rgb(255, 212, 131);
   font-weight: 900;
-  font-size: 1.3em;
+  font-size: 1.1vw;
   letter-spacing: 2px;
   text-transform: uppercase;
   transition: 0.1s ease-in-out;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 nav > a:hover {
   color: whitesmoke;
+  text-decoration: none;
 }
 
 .header > .section-2 {
@@ -72,7 +79,7 @@ nav > a:hover {
   font-weight: 300;
   outline: none;
   position: relative;
-  font-size: 16px;
+  font-size: 0.9vw;
   line-height: 50px;
   background-color: #8a1e3b;
   font-weight: 600;
@@ -194,7 +201,7 @@ nav > a:hover {
 
 #second {
   z-index: 1;
-  background-color: #8a1e3bc0;
+  background-color: #8a1e3bcb;
   min-width: 171px;
 }
 
@@ -237,6 +244,28 @@ nav > a:hover {
   }
 }
 
+.amenities {
+  margin-top: 2%;
+  background-image: radial-gradient(#ffd400 4px, transparent 4px),
+    radial-gradient(#ffd400 4px, transparent 4px);
+  /* background-color: #e53935; */
+  background-position: 0 0, 50px 50px;
+  background-size: 50px 50px;
+  height: 150px;
+  width: 100%;
+  background-color: #8a1e3b;
+  position: relative;
+  filter: blur(3px);
+}
+
+.amenities > h2 {
+  position: absolute;
+  top: 50;
+
+  color: white;
+  z-index: 10;
+}
+
 .body {
   padding: 0% 1.5% 1% 1.5%;
   display: flex;
@@ -246,14 +275,14 @@ nav > a:hover {
 }
 
 .room {
-  background-color: #ffdb98;
+  background-color: #297373;
   width: 45vw;
   min-height: 60vh;
   margin-bottom: 2em;
   padding: 1% 0% 1% 0%;
   border-radius: 2%;
   position: relative;
-  color: black;
+  color: white;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -264,9 +293,11 @@ nav > a:hover {
 }
 
 .room > h2 {
-  font-family: "Sacramento", cursive;
+  font-family: "Open Sans Condensed", sans-serif;
+  color: rgb(255, 212, 131);
   font-size: 3.3em;
   margin: 0;
+  margin-bottom: 2%;
 }
 
 .room > img {
@@ -283,27 +314,11 @@ nav > a:hover {
   padding: 3%;
 }
 
-/* .info-header {
-  display: flex;
-  flex-direction: row;
-  min-width: 80%;
-  margin-top: 2%;
-  margin-bottom: -2%;
-}
-
-.info-header > h4 {
-  text-transform: uppercase;
-  font-weight: 600;
-} */
-
-/* .info-header > h4:first-of-type {
-  margin-right: 15%;
-} */
-
 .info-header {
   display: flex;
   flex-direction: row;
-  width: 94%;
+  width: 90%;
+  justify-content: space-between;
   /* border: 1px solid black; */
   margin-bottom: -1.8%;
   margin-top: 1.5%;
@@ -323,8 +338,12 @@ nav > a:hover {
   justify-content: center;
   display: flex;
   flex-direction: column;
+  color: wheat;
   border: 1px solid #002144;
+  border-radius: 2%;
   margin-right: 2%;
+  /* box-shadow: 0 0 1px 3px rgba(0, 0, 0, 0.9) inset;
+  background-color: silver; */
 }
 
 .pricing > h3 {
@@ -343,6 +362,7 @@ nav > a:hover {
   max-height: 36vh;
   align-items: center;
   justify-content: center;
+  border-radius: 2%;
   display: flex;
   border: 1px solid #002144;
 }

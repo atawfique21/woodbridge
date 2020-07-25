@@ -8,13 +8,14 @@ const Header = () => {
                 <div className="logo">
                     <img src={logo} alt="Logo"></img>
                 </div>
+            </div>
+            <div className='section-mid'>
                 <nav>
                     <a href="#">Rooms & Pricing</a>
                     <a href="#">About us</a>
                     <a href="#">Frequently Asked Q's</a>
                 </nav>
             </div>
-
             <div className="section-2">
                 {/* <button>
                     Book Now
