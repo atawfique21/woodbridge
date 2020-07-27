@@ -8,6 +8,22 @@ import Carousel from 'react-bootstrap/Carousel'
 const Body = (props) => {
     return (
         <div className="body">
+            {props.rooms.map(room =>
+                <div className="room">
+                    <h2>{room.name}</h2>
+                    <Carousel interval='3000'>
+                        {room.photos.map(photo =>
+                            <Carousel.Item>
+                                <img
+                                    className='d-block w-100 slider-img'
+                                    src={photo.source}
+                                    alt={photo.alt}
+                                />
+                            </Carousel.Item>
+                        )}
+                    </Carousel>
+                </div>
+            )}
             <div className="room">
                 <h2>Bedroom #1</h2>
                 <Carousel interval='3000'>
@@ -66,18 +82,6 @@ const Body = (props) => {
             </div>
             <div className="room">
                 <h2>Bedroom #2</h2>
-            </div>
-            <div className="room">
-                <h2>Bedroom #3</h2>
-            </div>
-            <div className="room">
-                <h2>Bedroom #4</h2>
-            </div>
-            <div className="room">
-                <h2>Bedroom #5</h2>
-            </div>
-            <div className="room">
-                <h2>Bedroom #6</h2>
             </div>
         </div>
     )
