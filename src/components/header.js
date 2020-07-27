@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './logo2.png'
+import logo from '../assets/logo2.png'
 
 const Header = () => {
     return (
@@ -17,9 +17,6 @@ const Header = () => {
                 </nav>
             </div>
             <div className="section-2">
-                {/* <button>
-                    Book Now
-                </button> */}
                 <button class="snip1372">Book Now<i class="ion-ios-calendar-outline"></i></button>
             </div>
         </div>
