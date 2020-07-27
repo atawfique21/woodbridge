@@ -5,7 +5,7 @@ import bed1outside from '../assets/bed1outside.jpg'
 import calendar from '../assets/calendar.png'
 import Carousel from 'react-bootstrap/Carousel'
 
-const Body = () => {
+const Body = (props) => {
     return (
         <div className="body">
             <div className="room">
