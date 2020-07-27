@@ -1,5 +1,5 @@
 import React from "react";
-import kitchen from "./kitchen.jpg";
+import kitchen from "../assets/kitchen.jpg";
 
 class Landing extends React.Component {
     constructor(props) {
