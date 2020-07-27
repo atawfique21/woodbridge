@@ -7,16 +7,23 @@ import Specifics from './components/specifics'
 import './App.scss';
 
 
-function App() {
-  return (
-    <div className="App">
-      <Header />
-      <Landing />
-      <Specifics />
-      <Amenities />
-      <Body />
-    </div>
-  );
+class App extends React.Component {
+
+  constructor(props) {
+    super(props)
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <Landing />
+        <Specifics />
+        <Amenities />
+        <Body />
+      </div>
+    );
+  }
 }
 
 export default App;
