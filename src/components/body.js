@@ -1,8 +1,8 @@
 import React from 'react'
-import bed1 from './bed1.jpg'
-import bed1bath from './bed1bath.jpg'
-import bed1outside from './bed1outside.jpg'
-import calendar from './calendar.png'
+import bed1 from '../assets/bed1.jpg'
+import bed1bath from '../assets/bed1bath.jpg'
+import bed1outside from '../assets/bed1outside.jpg'
+import calendar from '../assets/calendar.png'
 import Carousel from 'react-bootstrap/Carousel'
 
 const Body = () => {
@@ -10,39 +10,55 @@ const Body = () => {
         <div className="body">
             <div className="room">
                 <h2>Bedroom #1</h2>
-                <Carousel interval='9999999999'>
+                <Carousel interval='3000'>
                     <Carousel.Item>
                         <img
-                            className="d-block w-100"
+                            className="d-block w-100 slider-img"
                             src={bed1}
                             alt="First bedroom"
                         />
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
-                            className="d-block w-100"
+                            className="d-block w-100 slider-img"
                             src={bed1bath}
                             alt="Bathroom for first bedroom"
                         />
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
-                            className="d-block w-100"
+                            className="d-block w-100 slider-img"
                             src={bed1outside}
                             alt="Outside first bedroom"
                         />
                     </Carousel.Item>
                 </Carousel>
-                <div className='info-header'>
-                    <h3>Pricing</h3>
-                    <h3>Availablity</h3>
-                </div>
                 <div className='info'>
-                    <div className='pricing'>
-                        <h3>$38</h3>
-                        <h6>A NIGHT</h6>
+                    <div className='info-container'>
+                        <h2>Pricing</h2>
+                        <h3 style={{ marginBottom: '-1.5%' }}><h6>STARTING AT</h6></h3>
+                        <h3>$39<h6>A NIGHT</h6></h3>
+                        <h2>Details</h2>
+                        <div className="room-details">
+                            <div className="single-room-detail">
+                                <ion-icon name="bed-sharp"></ion-icon>
+                                <h5>Bed Size</h5>
+                                <h4>Queen</h4>
+                            </div>
+                            <div className="single-room-detail">
+                                <ion-icon name="people-circle-sharp"></ion-icon>
+                                <h5>Max Guests</h5>
+                                <h4>Two</h4>
+                            </div>
+                            <div className="single-room-detail smaller">
+                                <ion-icon name="pricetag-sharp" style={{ fontSize: '3.5vh', margin: '0.25vh 0' }}></ion-icon>
+                                <h5>Wknd Pricing</h5>
+                                <h4 className='single-room-detail-wkndpricing'>$44</h4>
+                            </div>
+                        </div>
                     </div>
-                    <div className='availablity'>
+                    <div className='info-container'>
+                        <h2>Availablity</h2>
                         <img src={calendar}></img>
                     </div>
                 </div>
