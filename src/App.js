@@ -2,8 +2,9 @@ import React from 'react';
 import Header from './components/header'
 import Landing from './components/landing'
 import Body from './components/body'
-import Amenities from './components/amenities'
+import Section from './components/sectionHeader'
 import Specifics from './components/specifics'
+import Faq from './components/faq'
 import './App.scss';
 
 class App extends React.Component {
@@ -133,6 +134,32 @@ class App extends React.Component {
           bed_size: 'Double',
           max_guests: 'Two',
         }
+      ],
+      questions: [
+        {
+          q: 'Are long term stays allowed?',
+          a: 'Yes. Stays for one month or longer recieve a monthly discount of 10% and can be further negoitated depending on the situation.Please contact us for further details!'
+        },
+        {
+          q: 'Is this a private home or will I be sharing the space?',
+          a: 'Depending on when you stay with us, there can be anywhere from zero to five other guests staying with us.'
+        },
+        {
+          q: 'What do I share with other quests?',
+          a: 'All the common areas are shared in the home. This includes all three bathrooms, living room, kitchen and dining area, laundry room and outdoor patio.'
+        },
+        {
+          q: 'Can I host parties?',
+          a: 'Parties, no matter the size, are not allowed.'
+        },
+        {
+          q: 'Is parking available?',
+          a: 'Free parking is available behind the home on a first come basis. Additionally, there is always 24/7 free street parking in front of the home.'
+        },
+        {
+          q: 'Are washer and dryer units available on the property?',
+          a: 'Yes. There is a small charge in order to use our laundry units and generally, we have soap and softener available.'
+        }
       ]
     }
   }
@@ -142,9 +169,18 @@ class App extends React.Component {
       <div className="App">
         <Header />
         <Landing />
-        <Specifics />
-        <Amenities />
+        <Section
+          class={'amenities'}
+          title={'Rooms and pricing'}
+          sub={'All of our rooms feature a smart tv, computer desk and a dresser.'}
+        />
         <Body rooms={this.state.rooms} />
+        <Section
+          class={'amenities faq-header'}
+          title={'faq'}
+          sub={'Answers to our most frequently asked questions.'}
+        />
+        <Faq questions={this.state.questions} />
       </div>
     );
   }
