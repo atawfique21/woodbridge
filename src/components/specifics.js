@@ -3,7 +3,7 @@ import React from 'react'
 const Specifics = () => {
   return (
     <div className='specifics'>
-      <h2>Specifications</h2>
+      <h2>Other Specifications</h2>
       <div className='single-specific'>
         <div className='sss'>
           <div className='section-1'>
