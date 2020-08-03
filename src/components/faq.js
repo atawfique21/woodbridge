@@ -1,11 +1,14 @@
 import React from 'react';
 import Specifics from './specifics'
-import App from '../App';
 
 const Faq = (props) => {
 
   return (
     <div className='faq-container'>
+      <div class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
       <div className='faq specifics'>
         <h2>FREQUENTLY ASKED QUESTIONS</h2>
         <div className='questions-container'>
