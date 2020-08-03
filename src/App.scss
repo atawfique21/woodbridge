@@ -2,13 +2,15 @@ $gold: rgb(255, 212, 131);
 $second: #1d1d1d;
 $third: #272727;
 
-body {
+html, body {
   background-color: #002144;
   color: #8a1e3b;
   font-family: "Raleway", sans-serif;
   text-transform: capitalize;
   letter-spacing: 3px;
   overflow-x: hidden;
+  height: 100%;
+  scroll-behavior: smooth;
 }
 @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 
@@ -145,6 +147,7 @@ nav > a:hover {
   position: relative;
   text-align: center;
   color: white;
+  margin-bottom: 1%;
 }
 
 .landing > img {
@@ -259,7 +262,7 @@ nav > a:hover {
   width: 100%;
   height: 12vh;
   background: linear-gradient(-110deg, transparent 40%, #8a1e3b 20px);
-  margin-top: 1%;
+  // margin-top: 1%;
   color: wheat;
   position: relative;
   overflow: visible;
@@ -270,6 +273,10 @@ nav > a:hover {
 
 .faq-header {
   background: linear-gradient(-110deg, transparent 63%, #8a1e3b 20px);
+}
+
+.aboutus-header {
+  background: linear-gradient(-110deg, transparent 55%, #8a1e3b 20px);
 }
 
 .amenities > h2 {
@@ -300,42 +307,43 @@ nav > a:hover {
 }
 
 .lines {
+  height: 100%;
+  margin: none;
+  width: 2vw;
+  overflow: hidden;
+  display: flex;
   position: absolute;
-  top: 100%;
-  left: 1.8%;
-  height: 150vh;
-  margin: auto;
-  width: 20vw;
-  overflow: visible;
-  z-index: -1;
+  top: 0;
+  left: 1%;
 }
 
 .line {
-  position: absolute;
   width: 2px;
-  height: 240vh;
+  height: 100%;
   background-color: rgba(245, 245, 245, 0.15);
   overflow: visible;
+  position: relative;
 }
 
 .line::after {
   content: "";
   position: absolute;
-  height: 30vh;
+  height: 14%;
   width: 100%;
-  top: -50%;
+  // top: -50%;
   background-color: $gold;
-  animation: run 4s 0s infinite alternate;
+  animation: run 8s 0s infinite alternate;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
 }
 
 .line:nth-child(1) {
-  margin-left: -5%;
+  // margin-left: -50%;
+  margin-right: 30%;
 }
 
 .line:nth-child(1)::after {
-  animation-delay: 0.1s;
+  animation-delay: 0.05s;
 }
 
 @keyframes run {
@@ -343,7 +351,7 @@ nav > a:hover {
     top: 0%;
   }
   100% {
-    top: 87.5%;
+    top: 86.5%;
   }
 }
 
@@ -351,8 +359,10 @@ nav > a:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  justify-items: stretch;
   width: 100vw;
-  padding-left: 2%;
+  position: relative;
+  padding-bottom: 2%;
 }
 
 .specifics {
@@ -574,7 +584,8 @@ nav > a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-top: 0.5vh;
+  // margin-top: 0.5vh;
+  position: relative;
 }
 
 .room {
@@ -734,4 +745,64 @@ nav > a:hover {
 
 .room > .snip1372 {
   margin: -1.5% 0% -1% 0%;
+}
+
+.about-us-container {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-us {
+  margin: 1% 0%;
+  width: 95vw;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.about-us > .profile-picture {
+  font-size: 30rem;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid $gold;
+}
+
+.about-us > .profile-description {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.profile-description > h3 {
+  padding: 1.5%;
+  padding-bottom: 1%;
+  font-size: 2rem;
+  color: $gold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid $gold;
+}
+
+.profile-description > h4 {
+  font-weight: 200;
+  color: white;
+  padding: 0% 1%;
+  // padding-bottom: 1%;
+  font-size: 1.2rem;
+  letter-spacing: 0px;
+  text-transform: none;
+  width: 100%;
+  text-align: center;
+  // border-bottom: 1px solid $gold;
+  // margin-bottom: 4%;
 }
