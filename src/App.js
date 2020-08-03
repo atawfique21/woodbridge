@@ -3,8 +3,8 @@ import Header from './components/header'
 import Landing from './components/landing'
 import Body from './components/body'
 import Section from './components/sectionHeader'
-import Specifics from './components/specifics'
 import Faq from './components/faq'
+import About from './components/about'
 import './App.scss';
 
 class App extends React.Component {
@@ -138,7 +138,7 @@ class App extends React.Component {
       questions: [
         {
           q: 'Are long term stays allowed?',
-          a: 'Yes. Stays for one month or longer recieve a monthly discount of 10% and can be further negoitated depending on the situation.Please contact us for further details!'
+          a: 'Yes. Stays for one month or longer recieve a monthly discount of 10% and can be further negoitated depending on the situation. Please contact us for further details!'
         },
         {
           q: 'Is this a private home or will I be sharing the space?',
@@ -171,16 +171,24 @@ class App extends React.Component {
         <Landing />
         <Section
           class={'amenities'}
+          id={'rooms'}
           title={'Rooms and pricing'}
           sub={'All of our rooms feature a smart tv, computer desk and a dresser.'}
         />
         <Body rooms={this.state.rooms} />
         <Section
           class={'amenities faq-header'}
+          id={'faq'}
           title={'faq'}
           sub={'Answers to our most frequently asked questions.'}
         />
         <Faq questions={this.state.questions} />
+        <Section
+          class={'amenities aboutus-header'}
+          title={'About us'}
+          sub={'Get to know the story and team behind Woodbridge Luxury Stays.'}
+        />
+        <About />
       </div>
     );
   }
