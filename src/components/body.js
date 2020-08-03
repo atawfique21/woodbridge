@@ -8,7 +8,7 @@ const Body = (props) => {
       {props.rooms.map((room, key) =>
         <div className="room">
           <h2>{room.name}</h2>
-          <Carousel interval='3000'>
+          <Carousel interval='5000'>
             {room.photos.map(photo =>
               <Carousel.Item>
                 <img
@@ -51,6 +51,10 @@ const Body = (props) => {
           <button class="snip1372" id="second">Book Room #{key + 1}<i class="ion-ios-calendar-outline"></i></button>
         </div>
       )}
+      <div class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
     </div>
   )
 }
