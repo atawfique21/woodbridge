@@ -35,7 +35,7 @@ html, body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  min-width: 20%;
+  width: 25vw;
 }
 
 .logo {
@@ -50,20 +50,20 @@ html, body {
 }
 
 .header > .section-mid {
-  min-width: 65%;
+  width: 50vw;
 }
 
 nav {
   display: flex;
   flex-direction: row;
-  margin-left: 10%;
+  justify-content: center;
 }
 
 nav > a {
   margin: 0px 15px 0px 15px;
   text-decoration: none;
   color: rgb(255, 212, 131);
-  font-weight: 900;
+  font-weight: 500;
   font-size: 1.1vw;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -78,7 +78,9 @@ nav > a:hover {
 }
 
 .header > .section-2 {
-  margin-right: 1%;
+  padding-right: 1.5%;
+  width: 25vw;
+  text-align: end;
 }
 
 .snip1372 {
@@ -172,7 +174,7 @@ nav > a:hover {
   text-align: left;
   background-color: #8a1e3bbd;
   padding: 2%;
-  border-radius: 1.9%;
+  border-radius: 5px;
   color: #fff;
   letter-spacing: 3px;
   word-spacing: -5px;
@@ -308,7 +310,7 @@ nav > a:hover {
   margin: 0;
   padding: 1%;
   color: rgba(255, 255, 255, 0.75);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .lines {
@@ -580,7 +582,7 @@ nav > a:hover {
   color: rgba(255, 255, 255, 0.75);
   font-size: 1em;
   max-width: 80%;
-  font-weight: 600;
+  font-weight: 300;
   letter-spacing: 0.3px;
 }
 
@@ -913,9 +915,10 @@ nav > a:hover {
 .about-us {
   margin: 1% 0%;
   width: 95vw;
+  height: fit-content;
   display: flex;
   flex-direction: row;
-  padding: 1%;
+  padding: 0.1%;
 }
 
 .about-us > .profile-picture {
@@ -951,7 +954,7 @@ nav > a:hover {
 }
 
 .profile-description > h4 {
-  font-weight: 600;
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.75);
   padding: 0% 0.75%;
   // padding-bottom: 1%;
