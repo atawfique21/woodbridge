@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/header'
 import Landing from './components/landing'
 import Body from './components/body'
+import Attractions from './components/attractions'
 import Section from './components/sectionHeader'
 import Faq from './components/faq'
 import About from './components/about'
@@ -13,6 +14,20 @@ class App extends React.Component {
     super(props)
 
     this.state = {
+      attractions: [
+        {
+          source: require('./assets/browns.jpg'),
+          title: 'FirstEnergy Stadium',
+          caption: 'Go see a Browns Game!',
+          alt: 'Browns game with fans cheering.'
+        },
+        {
+          source: require('./assets/bed1.jpg'),
+          title: 'FirstEnergy Stadium',
+          caption: 'Go see a Browns Game!',
+          alt: 'Browns game with fans cheering.'
+        }
+      ],
       rooms: [
         {
           name: 'Bedroom #1',
@@ -177,6 +192,13 @@ class App extends React.Component {
         />
         <Body rooms={this.state.rooms} />
         <Section
+          class={'amenities attractions-header'}
+          id={'attractions'}
+          title={'Attractions'}
+          sub={'Take a look at some the nearby attractions and their distances from Woodbridge.'}
+        />
+        <Attractions attractions={this.state.attractions} />
+        <Section
           class={'amenities faq-header'}
           id={'faq'}
           title={'faq'}
@@ -185,7 +207,8 @@ class App extends React.Component {
         <Faq questions={this.state.questions} />
         <Section
           class={'amenities aboutus-header'}
-          title={'About us'}
+          id={'about'}
+          title={'About'}
           sub={'Get to know the story and team behind Woodbridge Luxury Stays.'}
         />
         <About />

@@ -50,7 +50,7 @@ html, body {
 }
 
 .header > .section-mid {
-  min-width: 50%;
+  min-width: 65%;
 }
 
 nav {
@@ -271,12 +271,16 @@ nav > a:hover {
   align-content: center;
 }
 
+.attractions-header {
+  background: linear-gradient(-110deg, transparent 52%, #8a1e3b 20px);
+}
+
 .faq-header {
   background: linear-gradient(-110deg, transparent 63%, #8a1e3b 20px);
 }
 
 .aboutus-header {
-  background: linear-gradient(-110deg, transparent 55%, #8a1e3b 20px);
+  background: linear-gradient(-110deg, transparent 59%, #8a1e3b 20px);
 }
 
 .amenities > h2 {
@@ -303,7 +307,8 @@ nav > a:hover {
   align-self: center;
   margin: 0;
   padding: 1%;
-  color: white;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 600;
 }
 
 .lines {
@@ -481,21 +486,20 @@ nav > a:hover {
   font-family: "Open Sans Condensed", sans-serif;
   letter-spacing: 1px;
   margin: 0;
-  color: white;
-  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 .text p{
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   letter-spacing: 0.5px;
   font-weight: 700;
-  margin-bottom: -1.5%;
-  margin-bottom: 0.8%;
+  margin-bottom: -1.7%;
 }
 
 .text h6{
   text-transform: none;
-
 }
 
 .text h6:first-of-type{
@@ -506,9 +510,9 @@ nav > a:hover {
   width: 52vw;
   position: relative;
 
-
   .arrow {
     top: 88%;
+    left: 98%;
   }
 
   .arrow span {
@@ -518,7 +522,7 @@ nav > a:hover {
     border-bottom: 5px solid rgba(255, 212, 131, 0.65);
     border-right: 5px solid rgba(255, 212, 131, 0.65);
     transform: rotate(45deg);
-    margin: -7px;
+    margin: -4px;
     animation: animate 3s infinite;
   }
   .arrow span:nth-child(2) {
@@ -573,9 +577,10 @@ nav > a:hover {
   // font-family: "Open Sans Condensed", sans-serif;
   text-align: center;
   text-transform: none;
-  color: white;
+  color: rgba(255, 255, 255, 0.75);
   font-size: 1em;
   max-width: 80%;
+  font-weight: 600;
   letter-spacing: 0.3px;
 }
 
@@ -747,6 +752,92 @@ nav > a:hover {
   margin: -1.5% 0% -1% 0%;
 }
 
+.attractions-container {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.attractions {
+  margin: 1% 0%;
+  width: 95vw;
+  display: flex;
+  flex-direction: row;
+  padding: 1%;
+  overflow: hidden;
+}
+
+.attractions > .carousel {
+  // padding: 1%;
+  border-radius: 15px;
+  // background-color: $second;
+  width: 48vw;
+  margin-right: 1%;
+}
+
+.attraction-title, .attraction-caption{
+  background-color: rgba(0, 0, 0, 0.75);
+  font-weight: 600;
+  padding: 0.25%;
+  color: $gold;
+  // width: fit-content;
+}
+
+.attraction-title {
+  margin-bottom: 2px;
+}
+
+.nearby {
+  width: 48vw;
+  height: 100%;
+  border-left: 1px solid $gold;
+}
+
+.nearby > h2 {
+  padding: 1.5%;
+  padding-bottom: 1%;
+  font-size: 2rem;
+  color: $gold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid;
+  margin-bottom: 4%;
+  margin-top: -1.5%;
+}
+
+.nearby.specifics {
+  border-radius: 0px;
+}
+
+.nearby > .single-specific {
+  height: 30%;
+  width: 98%;
+}
+
+.nearby > .single-specific > .sss > .section-1 {
+  margin-right: 0;
+}
+
+.attraction-details{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.attraction-details > ul > li > p {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1vw;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+
+
 .about-us-container {
   position: relative;
   width: 100vw;
@@ -760,11 +851,11 @@ nav > a:hover {
   width: 95vw;
   display: flex;
   flex-direction: row;
-
+  padding: 1%;
 }
 
 .about-us > .profile-picture {
-  font-size: 30rem;
+  font-size: 28rem;
   width: 30%;
   height: 100%;
   display: flex;
@@ -776,33 +867,35 @@ nav > a:hover {
 
 .about-us > .profile-description {
   width: 70%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-self: flex-start;
+  justify-content: space-around;
 }
 
 .profile-description > h3 {
-  padding: 1.5%;
-  padding-bottom: 1%;
-  font-size: 2rem;
+  padding: 1%;
+  padding-bottom: 0.1%;
+  font-size: 1.8rem;
   color: $gold;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   width: 100%;
-  text-align: center;
+  // text-align: center;
   border-bottom: 1px solid $gold;
 }
 
 .profile-description > h4 {
-  font-weight: 200;
-  color: white;
-  padding: 0% 1%;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+  padding: 0% 0.75%;
   // padding-bottom: 1%;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   letter-spacing: 0px;
   text-transform: none;
   width: 100%;
-  text-align: center;
+  // text-align: center;
   // border-bottom: 1px solid $gold;
   // margin-bottom: 4%;
 }
