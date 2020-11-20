@@ -27,36 +27,59 @@ const Attractions = (props) => {
           </Carousel>
         </div>
         <div className='nearby specifics'>
-          <h2>NEARBY ATTRACTIONS</h2>
-          <div className='single-specific'>
-            <div className='sss'>
-              <div className='section-1'>
-                <ion-icon name="ticket-sharp"></ion-icon>
-                <h3>Attractions</h3>
+          <h2>NEARBY</h2>
+          <div className='nearby-container'>
+            <div className='single-specific'>
+              <div className='sss'>
+                <div className='section-1'>
+                  <ion-icon name="map-sharp"></ion-icon>
+                  <h3>Attractions</h3>
+                </div>
+                <div className='attraction-details'>
+                  <ul>
+                    <li>Greater Cleveland Aquarium | 9 Min Drive</li>
+                    <li>Cleveland Metroparks Zoo | 4 Min Drive</li>
+                    <li>Rock & Roll Hall Of Fame | 10 Min Drive</li>
+                    <li>Westside Market | 5 Min Drive</li>
+                  </ul>
+                </div>
               </div>
-              <div className='attraction-details'>
-                <ul>
-                  <li><p>Greater Cleveland Aquarium | 9 Min Drive</p></li>
-                  <li><p>Cleveland Metroparks Zoo | 4 Min Drive</p></li>
-                  <li><p>Rock & Roll Hall Of Fame | 10 Min Drive</p></li>
-                </ul>
+            </div>
+            <div className='single-specific'>
+              <div className='sss'>
+                <div className='section-1'>
+                  <ion-icon name="american-football-sharp"></ion-icon>
+                  <h3>Sports</h3>
+                </div>
+                <div className='attraction-details'>
+                  <ul>
+                    <li>FirstEnergy Stadium (Cleveland Browns) | 10 Min Drive</li>
+                    <li>Progressive Field (Cleveland Indians) | 7 Min Drive</li>
+                    <li>Rocket Mortgage FieldHouse (Cleveland Cavaliers) | 8 Min Drive</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className='single-specific'>
+              <div className='sss'>
+                <div className='section-1'>
+                  <ion-icon name="location-sharp"></ion-icon>
+                  <h3>Locations</h3>
+                </div>
+                <div className='attraction-details'>
+                  <ul>
+                    <li>The Flats / Steelyards | 5 Min Drive</li>
+                    <li>Ohio City | 9 Min Drive</li>
+                    <li>Edgewater Park/Beach | 13 Min Drive</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-          <div className='single-specific'>
-            <div className='sss'>
-              <div className='section-1'>
-                <ion-icon name="american-football-sharp"></ion-icon>
-                <h3>Sports</h3>
-              </div>
-              <div className='attraction-details'>
-                <ul>
-                  <li><p>FirstEnergy Stadium (Cleveland Browns) | 10 Min Drive</p></li>
-                  <li><p>Progressive Field (Cleveland Indians) | 7 Min Drive</p></li>
-                  <li><p>Rocket Mortgage FieldHouse (Cleveland Cavaliers) | 8 Min Drive</p></li>
-                </ul>
-              </div>
-            </div>
+          <div class="arrow">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
         </div>
       </div>

@@ -12,7 +12,7 @@ const Header = () => {
       <div className='section-mid'>
         <nav>
           <a href="#rooms">Rooms & Pricing</a>
-          <a href="#attractions">Attractions</a>
+          <a href="#nearby">Nearby</a>
           <a href="#faq">Frequently Asked Q's</a>
           <a href="#about">About</a>
         </nav>

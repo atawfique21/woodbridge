@@ -193,9 +193,9 @@ class App extends React.Component {
         <Body rooms={this.state.rooms} />
         <Section
           class={'amenities attractions-header'}
-          id={'attractions'}
-          title={'Attractions'}
-          sub={'Take a look at some the nearby attractions and their distances from Woodbridge.'}
+          id={'nearby'}
+          title={'Nearby'}
+          sub={'Take a look at some of what is near Woodbridge and their distance.'}
         />
         <Attractions attractions={this.state.attractions} />
         <Section
