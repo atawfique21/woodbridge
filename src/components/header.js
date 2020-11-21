@@ -11,9 +11,9 @@ const Header = () => {
       </div>
       <div className='section-mid'>
         <nav>
-          <a href="#rooms">Rooms & Pricing</a>
+          <a href="#rooms">Rooms</a>
           <a href="#nearby">Nearby</a>
-          <a href="#faq">Frequently Asked Q's</a>
+          <a href="#faq">FAQ</a>
           <a href="#about">About</a>
         </nav>
       </div>

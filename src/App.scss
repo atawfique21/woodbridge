@@ -60,11 +60,11 @@ nav {
 }
 
 nav > a {
-  margin: 0px 15px 0px 15px;
+  margin: 0px 1.5vw 0px 1.5vw;
   text-decoration: none;
   color: rgb(255, 212, 131);
   font-weight: 500;
-  font-size: 1.1vw;
+  font-size: 1.3em;
   letter-spacing: 2px;
   text-transform: uppercase;
   transition: 0.1s ease-in-out;
@@ -965,4 +965,162 @@ nav > a:hover {
   // text-align: center;
   // border-bottom: 1px solid $gold;
   // margin-bottom: 4%;
+}
+
+@media only screen
+and (min-device-width : 100px)
+and (max-device-width : 800px) {
+  .App > .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header > .section-1 {
+    width: 100vw;
+    flex-direction: column;
+    justify-items: center;
+  }
+
+  .header > .section-1 > .logo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo > img {
+    width: 100%;
+    align-self: center;
+  }
+
+  .header > .section-mid {
+    width: 95vw;
+    margin: 0.5vh 0vw 1.5vh 0vw;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav > a {
+    margin: 0px 3vw 0px 3vw;
+    font-size: calc(10px + 1.1vw);
+    font-weight: 600;
+  }
+
+  .header > .section-2 {
+    display: none;
+  }
+
+  .landing {
+    padding: 0;
+    margin-bottom: 1.5vh;
+  }
+
+  .landing > img {
+    width: auto;
+    height: 30vh;
+    border-radius: 0;
+  }
+
+  .landing > .hover {
+    top: 15%;
+    left: 10%;
+  }
+
+  .landing > .hover > h2 {
+    font-size: 5.8vw;
+    width: 55vw;
+    line-height: 4vh;
+    background-color: #8a1e3b9f;
+  }
+
+  .hover > .hover-btns {
+    display: none;
+  }
+
+  .landing > .arrow {
+    top: 80%;
+  }
+
+  .arrow > span {
+    width: 10px;
+    height: 10px;
+    margin: -3px;
+  }
+
+  .amenities {
+    height: 10vh;
+    background: linear-gradient(-105deg, transparent 10%, #8a1e3b 20px);
+  }
+
+  .amenities h2 {
+    font-size: 5vw;
+  }
+
+  .amenities h5 {
+    max-width: 35%;
+    font-size: 2.5vw;
+    margin-left: 1vw;
+    letter-spacing: 1.5px;
+  }
+
+  .lines {
+    display: none;
+  }
+
+  .room:nth-child(odd) {
+    margin-right: 0;
+  }
+
+  .room {
+    width: 100vw;
+    padding: 0;
+    border-radius: 10px;
+  }
+
+  .room > .snip1372 {
+    font-size: 4vw;
+    font-weight: 500;
+    margin-bottom: 1vh;
+  }
+
+  .info > .info-container {
+    width: 50vw;
+    height: 36vh;
+  }
+
+  .info-container > h2 {
+    font-size: 1.6rem;
+  }
+
+  .info-container > h3:first-of-type {
+    margin-top: 1vh;
+  }
+
+  .room-details > .single-room-detail {
+    width: 14vw;
+    font-size: 6vw;
+    justify-content: center;
+  }
+
+  .single-room-detail > h4 {
+    letter-spacing: 0.5px;
+    margin-bottom: 0;
+  }
+
+  .room-details > .smaller {
+    font-size: 5vw;
+    word-spacing: -1.5px;
+    text-align: center;
+  }
+
+  ion-icon[name="pricetag-sharp"] {
+    transform: scale(0.70);
+    margin: -2.5px 0px -2px 0px!important;
+  }
+
+  .info-container > img {
+    width: 90%;
+  }
+
 }
