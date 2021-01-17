@@ -7,6 +7,8 @@ import Section from './components/sectionHeader'
 import Faq from './components/faq'
 import About from './components/about'
 import './App.scss';
+import { gapi } from 'gapi-script';
+
 
 class App extends React.Component {
 
@@ -14,6 +16,7 @@ class App extends React.Component {
     super(props)
 
     this.state = {
+      events: [],
       attractions: [
         {
           source: require('./assets/browns.jpg'),
@@ -22,10 +25,22 @@ class App extends React.Component {
           alt: 'Browns game with fans cheering.'
         },
         {
-          source: require('./assets/bed1.jpg'),
-          title: 'FirstEnergy Stadium',
-          caption: 'Go see a Browns Game!',
-          alt: 'Browns game with fans cheering.'
+          source: require('./assets/zoo.jpg'),
+          title: 'Cleveland Metroparks Zoo',
+          caption: 'Featuring over 3,000 animals!',
+          alt: 'Lion from the Cleveland Metroparks Zoo looking into the camera.'
+        },
+        {
+          source: require('./assets/westsidemarket.jpg'),
+          title: 'Westside Market',
+          caption: 'From fresh pastries to pasta to produce!',
+          alt: 'Pastries from vendor inside of westside market.'
+        },
+        {
+          source: require('./assets/aquarium.jpg'),
+          title: 'Cleveland Aquarium',
+          caption: 'More than 1,400 fresh and salt water animals!',
+          alt: 'Woman touching stingray as it passes by.'
         }
       ],
       rooms: [
@@ -48,6 +63,7 @@ class App extends React.Component {
           base_price: 39,
           bed_size: 'Queen',
           max_guests: 'Two',
+          link: 'https://www.airbnb.com/rooms/28538147?s=67&unique_share_id=803b402b-2ef9-4096-a6b4-ae6b265f2fff'
         },
         {
           name: 'Bedroom #2',
@@ -68,17 +84,22 @@ class App extends React.Component {
           base_price: 29,
           bed_size: 'Full',
           max_guests: 'One',
+          link: 'https://www.airbnb.com/rooms/31385446?s=67&unique_share_id=81b624d5-4826-402d-869b-7967dea57eea'
         },
         {
           name: 'Bedroom #3',
           photos: [
             {
-              source: require('./assets/bed3_arial.jpg'),
+              source: require('./assets/bed3_new.jpg'),
               alt: 'Interior of bedroom three.'
             },
             {
-              source: require('./assets/bed3.jpg'),
-              alt: 'Arial view of bedroom three.'
+              source: require('./assets/bed3closet_new.jpg'),
+              alt: 'Closet view of bedroom three.'
+            },
+            {
+              source: require('./assets/bed3outside_new.jpg'),
+              alt: 'Hallway leading to bedroom 3.'
             },
             {
               source: require('./assets/bed1bath.jpg'),
@@ -88,13 +109,18 @@ class App extends React.Component {
           base_price: 39,
           bed_size: 'Queen',
           max_guests: 'Two',
+          link: 'https://www.airbnb.com/rooms/29704660?s=67&unique_share_id=2227bf67-758a-4d47-b168-a0496a4ccd02'
         },
         {
           name: 'Bedroom #4',
           photos: [
             {
-              source: require('./assets/bed4.jpg'),
+              source: require('./assets/bed4_new.jpg'),
               alt: 'Interior of bedroom four.'
+            },
+            {
+              source: require('./assets/bed4alt_new.png'),
+              alt: 'Alternative view of the interior of bedroom four.'
             },
             {
               source: require('./assets/bed4outside.jpg'),
@@ -108,13 +134,18 @@ class App extends React.Component {
           base_price: 50,
           bed_size: 'Queen',
           max_guests: 'Two',
+          link: 'https://www.airbnb.com/rooms/26238736?s=67&unique_share_id=23fc5a22-f1c5-4815-a2f9-1cbbe81c8cea'
         },
         {
           name: 'Bedroom #5',
           photos: [
             {
-              source: require('./assets/bed5.jpg'),
+              source: require('./assets/bed5_new.JPG'),
               alt: 'Interior of bedroom five.'
+            },
+            {
+              source: require('./assets/bed5closet_new.JPG'),
+              alt: 'Alternate view of Room 5, including a deeper look into the closet.'
             },
             {
               source: require('./assets/bed4outside.jpg'),
@@ -128,13 +159,18 @@ class App extends React.Component {
           base_price: 40,
           bed_size: 'Queen',
           max_guests: 'Two',
+          link: 'https://www.airbnb.com/rooms/21390430?s=67&unique_share_id=5124a3a9-23c0-461f-87cc-4ebf560e4a29'
         },
         {
           name: 'Bedroom #6',
           photos: [
             {
-              source: require('./assets/bed6.jpg'),
+              source: require('./assets/bed6_new.jpg'),
               alt: 'Interior of bedroom one.'
+            },
+            {
+              source: require('./assets/bed6alt_new.jpg'),
+              alt: 'Alternative view of the interior of bedroom one.'
             },
             {
               source: require('./assets/bed4outside.jpg'),
@@ -148,6 +184,7 @@ class App extends React.Component {
           base_price: 39,
           bed_size: 'Double',
           max_guests: 'Two',
+          link: 'https://www.airbnb.com/rooms/27368163?s=67&unique_share_id=49bef54c-285c-4e62-a0cd-8891b64a62be'
         }
       ],
       questions: [
@@ -178,6 +215,33 @@ class App extends React.Component {
       ]
     }
   }
+
+  // componentDidMount = () => {
+  //   this.getEvents()
+  // }
+
+  // getEvents() {
+  //   let that = this;
+  //   function start() {
+  //     gapi.client.init({
+  //     }).then(function () {
+  //       return gapi.client.request({
+  //         'path': `https://www.googleapis.com/calendar/v3/calendars/8orui7epnl0qf1aaktvq25gvmf1sr6a1@import.calendar.google.com/events?key=AIzaSyCcVvGm01q2CWc0X4aZJgm4emMxLeBio7Uh`,
+  //       })
+  //     }).then((response) => {
+  //       let events = response.result.items
+  //       that.setState({
+  //         events
+  //       }, () => {
+  //         console.log(that.state.events);
+  //       })
+  //     }, function (reason) {
+  //       console.log(reason);
+  //     });
+  //   }
+  //   gapi.load('client', start)
+  // }
+
 
   render() {
     return (
