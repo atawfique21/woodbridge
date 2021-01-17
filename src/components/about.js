@@ -8,9 +8,9 @@ const About = () => {
         <div class="line"></div>
       </div>
       <div className='about-us specifics'>
-        <div className='profile-picture'>
+        {/* <div className='profile-picture'>
           <ion-icon name="person-sharp"></ion-icon>
-        </div>
+        </div> */}
         <div className='profile-description'>
           {/* <h2>Hi, I'm Chris!</h2> */}
           <h3>About this space</h3>
