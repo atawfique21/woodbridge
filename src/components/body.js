@@ -1,12 +1,16 @@
 import React from 'react'
-import calendar from '../assets/calendar.png'
 import Carousel from 'react-bootstrap/Carousel'
+import '../../node_modules/react-big-calendar/lib/css/react-big-calendar.css';
+import { Calendar, momentLocalizer } from 'react-big-calendar';
+import moment from 'moment';
+
+const localizer = momentLocalizer(moment);
 
 const Body = (props) => {
   return (
     <div className="body">
       {props.rooms.map((room, key) =>
-        <div className="room">
+        <div className="room" key={key}>
           <h2>{room.name}</h2>
           <Carousel interval='5000'>
             {room.photos.map(photo =>
@@ -45,10 +49,21 @@ const Body = (props) => {
             </div>
             <div className='info-container'>
               <h2>Availablity</h2>
-              <img src={calendar}></img>
+              <Calendar
+                events={[]}
+                startAccessor="start"
+                endAccessor="end"
+                defaultDate={moment().toDate()}
+                localizer={localizer}
+              />
+              <div className='unavailable'>
+                <h6>Calendar Currently Unavailable</h6>
+                <h6>Please Check Airbnb Calendar for Availablity</h6>
+              </div>
+              {/* <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%23A79B8E&amp;ctz=America%2FNew_York&amp;src=OG9ydWk3ZXBubDBxZjFhYWt0dnEyNWd2bWYxc3I2YTFAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%238E24AA&amp;showTitle=0&amp;showNav=1&amp;showDate=1&amp;showTabs=0&amp;showCalendars=0&amp;showTz=1" style={{ "border-width": "0", "width": "100%", "height": "100%", "frameborder": "0", "scrolling": "no" }}></iframe> */}
             </div>
           </div>
-          <button class="snip1372" id="second">Book Room #{key + 1}<i class="ion-ios-calendar-outline"></i></button>
+          <a class="snip1372" href={room.link} target="_blank" rel="noopener noreferrer" id="second">Book Room #{key + 1}<i class="ion-ios-calendar-outline"></i></a>
         </div>
       )}
       <div class="lines">
