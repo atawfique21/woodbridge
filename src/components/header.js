@@ -18,7 +18,7 @@ const Header = () => {
         </nav>
       </div>
       <div className="section-2">
-        <button class="snip1372">Book Now<i class="ion-ios-calendar-outline"></i></button>
+        <a className="snip1372" href="#rooms">Book Now<i class="ion-ios-calendar-outline"></i></a>
       </div>
     </div>
   )
