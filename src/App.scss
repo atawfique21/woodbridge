@@ -98,7 +98,9 @@ nav > a:hover {
   line-height: 50px;
   background-color: #8a1e3b;
   font-weight: 600;
+  user-select: none;
 }
+
 .snip1372 i {
   font-size: 1.5em;
   width: 55px;
@@ -932,13 +934,14 @@ nav > a:hover {
 }
 
 .about-us > .profile-description {
-  width: 70%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-self: flex-start;
   justify-content: space-around;
-  border-left: 1px solid $gold;
+  // border-left: 1px solid $gold;
+  text-align: center;
 }
 
 .profile-description > h3 {
@@ -1302,6 +1305,7 @@ and (max-device-width : 580px) {
 
   .attractions-header {
     background: linear-gradient(-105deg, transparent 40%, #8a1e3b 20px);
+    margin-bottom: 2vh;
   }
 
   .faq-header {
@@ -1333,8 +1337,12 @@ and (max-device-width : 580px) {
   }
 
   .info > .info-container {
-    width: 50vw;
+    width: 95vw;
     min-height: 36vh;
+  }
+
+  .info > :nth-child(2) {
+    display: none;
   }
 
   .info-container > h2 {
@@ -1346,7 +1354,7 @@ and (max-device-width : 580px) {
   }
 
   .room-details > .single-room-detail {
-    width: 14vw;
+    width: 28vw;
     font-size: 6vw;
     justify-content: center;
   }
@@ -1472,4 +1480,81 @@ and (max-device-width : 580px) {
   .about-us > .profile-description > h4 { 
     font-size: 4vw;
   }
+}
+
+
+
+// Calendar CSS below:
+
+.rbc-calendar {
+  padding: 0.5vw;
+  width: 95%;
+  filter: blur(3px);
+  pointer-events: none;
+}
+
+div.rbc-toolbar > span:nth-child(1) {
+  margin-top: -1vh;
+  margin-bottom: 0.25vh;
+}
+
+div.rbc-toolbar > span:nth-child(2) {
+  margin-bottom: -1vh;
+}
+
+div.rbc-toolbar > span:nth-child(3) {
+  display: none;
+}
+
+.rbc-toolbar {
+  font-size: 14px;
+}
+
+.rbc-toolbar button:hover {
+  background-color: $gold;
+  color: black;
+  outline: none;
+}
+
+.rbc-toolbar button {
+  color: $gold;
+}
+
+.rbc-today {
+  background-color: #8a1e3bcb;
+  color: black;
+}
+
+.rbc-month-view {
+  user-select: none;
+  pointer-events: none;
+}
+
+.rbc-off-range-bg {
+  background-color: $third;
+}
+
+#td-print-image-id {
+  display: none;
+}
+
+#root > div > div.body > div:nth-child(1) > div.info > div:nth-child(2) > iframe {
+  filter: invert(1);
+}
+
+// .unavailable { 
+//   position: absolute;
+//   bottom: 25%;
+//   left: 43%;
+// }
+
+.unavailable > h6 {
+  font-size: 0.8em;
+  text-align: center;
+  // padding: 2%;
+  margin: 0;
+  // background-color: rgba(0, 0, 0, 0.562);
+  // width: 95%;
+  color: $gold;
+  letter-spacing: 0px;
 }
