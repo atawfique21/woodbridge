@@ -12,7 +12,7 @@
     "gapi-script": "^1.0.2",
     "jquery": "^3.5.1",
     "moment": "^2.29.1",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "react": "^16.14.0",
     "react-big-calendar": "^0.28.6",
     "react-bootstrap": "^1.4.0",
